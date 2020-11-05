@@ -9,17 +9,17 @@ Inspiration and a significant chunk of code was obtained by [Raymond Yuan](https
 
 ## Example
 
-####Using this as the original image
+#### Using this as the original image
 ![alt text](https://github.com/dimitrisnikolaou10/Neural-Style-Transfer/blob/main/lib/input/content/plagiari.jpg)
 
-####And "stealing" the style from Van Gogh's Starry Night
+#### And "stealing" the style from Van Gogh's Starry Night
 ![alt text](https://github.com/dimitrisnikolaou10/Neural-Style-Transfer/blob/main/lib/input/style/Van_Gogh-Starry_Night.jpg)
 
-####We get this as an outcome.
+#### We get this as an outcome.
 ![alt text](https://github.com/dimitrisnikolaou10/Neural-Style-Transfer/blob/main/lib/output/plagiari_Van_Gogh-Starry_Night_output.jpg 
 )
 
-####Cool right? Try it yourself.
+#### Cool right? Try it yourself.
 
 
 ## Instructions
