@@ -50,7 +50,7 @@ tf.enable_eager_execution()
 print("Eager execution: {}".format(tf.executing_eagerly()))
 
 # Set up some global values here
-CONTENT_PATH = '../lib/input/content/dimi_lyca.jpg'
+CONTENT_PATH = '../lib/input/content/plagiari.jpg'
 STYLE_PATH = '../lib/input/style/Van_Gogh-Starry_Night.jpg'
 
 
@@ -351,7 +351,7 @@ def show_results(best_img, content_path, style_path, show_large_final=True):
 
 def main(content_path, style_path):
     best, best_loss = run_style_transfer(content_path,
-                                         style_path, num_iterations=10)
+                                         style_path, num_iterations=50)
 
     im = Image.fromarray(best)
     content_name = content_path.split("/")[-1].split(".")[0]
