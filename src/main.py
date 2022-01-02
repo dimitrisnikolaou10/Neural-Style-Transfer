@@ -46,8 +46,8 @@ STYLE_LAYERS = ['block1_conv1',
 NUM_CONTENT_LAYERS = len(CONTENT_LAYERS)
 NUM_STYLE_LAYERS = len(STYLE_LAYERS)
 
-tf.enable_eager_execution()
-print("Eager execution: {}".format(tf.executing_eagerly()))
+# tf.enable_eager_execution() NO NEED FOR TF > 2.0 to run tf.enable_eager_execution()
+# print("Eager execution: {}".format(tf.executing_eagerly()))
 
 # Set up some global values here
 CONTENT_PATH = '../lib/input/content/plagiari.jpg'
@@ -255,7 +255,8 @@ def run_style_transfer(content_path,
     init_image = load_and_process_img(content_path)
     init_image = tf.Variable(init_image, dtype=tf.float32)
     # Create our optimizer
-    opt = tf.train.AdamOptimizer(learning_rate=5, beta1=0.99, epsilon=1e-1)
+    opt = tf.keras.optimizers.Adam(learning_rate=5, beta_1=0.99, epsilon=1e-1)
+    # opt = tf.train.AdamOptimizer()
 
     # For displaying intermediate images
     iter_count = 1
